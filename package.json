@@ -1,0 +1,19 @@
+{
+  "name": "bookmark2.0",
+  "version": "1.0.0",
+  "description": "bookmark",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkful-ei19/bookmark2.0-julie.git"
+  },
+  "author": "Julie Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkful-ei19/bookmark2.0-julie/issues"
+  },
+  "homepage": "https://github.com/thinkful-ei19/bookmark2.0-julie#readme"
+}
