@@ -17,5 +17,15 @@ const bookmarkList = (function(){
   }
 
 
+  function generateBookmarkString(bookmarkArray) {
+    const bookmarks = bookmarkArray.map((bookmark) => generateBookmark(bookmark));
+
+    return bookmarks.join('');
+  } 
+
+  return {
+    generateBookmark,
+    generateBookmarkString
+  };
 
 }());
