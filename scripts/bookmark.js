@@ -1,4 +1,5 @@
 'use strict';
+/* global $, cuid*/
 
 const bookmarkList = (function(){
   function generateBookmark(bookmark) {
@@ -19,13 +20,30 @@ const bookmarkList = (function(){
 
   function generateBookmarkString(bookmarkArray) {
     const bookmarks = bookmarkArray.map((bookmark) => generateBookmark(bookmark));
-
+    console.log(bookmarks);
     return bookmarks.join('');
   } 
 
+  function handleNewBookmarkSubmit() {
+    $('#js-bookmark-form').on('submit', function(event) {
+      event.preventDefault();
+      const newBookmark = {
+        title: $('.js-bookmark-entry-title').val(),
+        desc: $('.js-bookmark-entry-description').val(),
+        rating: $('.js-bookmark-entry-rating').val(),
+        url: $('.js-boomark-entry-url').val(),
+        id: cuid(),
+      };
+      console.log(newBookmark);
+    });
+  }
+
+
+
   return {
     generateBookmark,
-    generateBookmarkString
+    generateBookmarkString,
+    handleNewBookmarkSubmit
   };
 
 }());
